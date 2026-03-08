@@ -10,7 +10,7 @@ for avoid get password in mempool from listen bots with his stolen keys
 
 Transfer ownership gaslessly — owner signs off-chain, anyone can submit the tx.
 
-## How it works
+How it works
 
 The owner signs a typed EIP-712 struct committing to a specific `newOwner` and a `passwordHash`.
 To execute, the submitter must provide the matching plain-text password.
@@ -28,6 +28,7 @@ Swapping `newOwner`, using a wrong password, or replaying the same signature all
 The signature is also bound to `chainId` and `verifyingContract` so it can't be used elsewhere.
 
 To rotate: owner calls `setPassword(newPassword)` which resets the OTP for a fresh transfer.
+```
 
 ## Run
 
