@@ -10,10 +10,12 @@ To execute, the submitter must provide the matching plain-text password.
 The password is hashed on-chain and compared. Once used, the OTP is burned forever.
 
 ```
+
+```
+
 owner signs: { newOwner, hash(password) }
 anyone calls: transferOwnership(newOwner, password, signature)
 contract checks: hash(password) matches + signature is from owner + not already used
-```
 
 Swapping `newOwner`, using a wrong password, or replaying the same signature all revert.
 The signature is also bound to `chainId` and `verifyingContract` so it can't be used elsewhere.
@@ -26,5 +28,4 @@ To rotate: owner calls `setPassword(newPassword)` which resets the OTP for a fre
 nvm use 22
 npm i
 npx hardhat test
-```
 ```
