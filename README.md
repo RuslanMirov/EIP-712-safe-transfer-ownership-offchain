@@ -1,7 +1,8 @@
 # Why need extra password ?
 
 ```
-This is part of another big project for case if somebody steal owner private keys he can change owner by send gas less tx + flashbots RPC for avoid get password in mempool
+This is part of another big project for case if somebody steal owner private keys he can change owner by send gas less tx + flashbots RPC
+for avoid get password in mempool from listen bots with his stolen keys
 ```
 
 # EIP-712 Ownership Transfer with One-Time Password
