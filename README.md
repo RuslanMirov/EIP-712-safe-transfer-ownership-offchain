@@ -1,5 +1,11 @@
-```markdown
+# Why need extra password ?
+
+```
+This is part of another big project for case if somebody steal owner private keys he can change owner by send gas less tx + flashbots RPC for avoid get password in mempool
+```
+
 # EIP-712 Ownership Transfer with One-Time Password
+```
 
 Transfer ownership gaslessly — owner signs off-chain, anyone can submit the tx.
 
@@ -29,3 +35,5 @@ nvm use 22
 npm i
 npx hardhat test
 ```
+
+
